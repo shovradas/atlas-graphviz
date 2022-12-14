@@ -1,0 +1,20 @@
+.graph-widget{
+    margin-bottom: 1.5em;
+}
+
+.graph-widget .header {}
+
+.graph-widget .canvas{
+    height: 40em;
+    width: 100%;
+}
+
+.graph-widget .canvas .nodes {}
+
+.graph-widget .canvas .nodes .node {}
+
+.graph-widget .canvas .links .link {}
+
+.graph-widget .canvas .links {}
+
+.graph-widget .footer {}
