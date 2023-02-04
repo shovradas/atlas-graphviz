@@ -2,11 +2,11 @@
 <html lang="en">
 
 <head>
-    <link rel="stylesheet" href="lib/css/material.orange-amber.min.css">
-    <link rel="stylesheet" type="text/css" href="lib/css/googleFonts.css" /> 
-    <script src="lib/js/jquery-3.4.1.min.js"></script>
-    <script src="lib/js/material.js"></script>
-    <script src="lib/js/d3.v7.min.js"></script>
+    <link rel="stylesheet" href="../lib/css/material.orange-amber.min.css">
+    <link rel="stylesheet" type="text/css" href="../lib/css/googleFonts.css" /> 
+    <script src="../lib/js/jquery-3.4.1.min.js"></script>
+    <script src="../lib/js/material.js"></script>
+    <script src="../lib/js/d3.v7.min.js"></script>
 
     <link rel="stylesheet" href="graph.css">
     <script src="graphTemplates.js"></script>
@@ -18,9 +18,9 @@
     <div style="margin: auto 12.5%;">
         <div class="mdl-shadow--3dp" style="margin: 1rem 0; padding: 1.1rem">
             <select onchange="OnSelectionChange(this.value)">
-                <option value="1">Scenario 1</option>
-                <option value="2">Scenario 2</option>
-                <option value="3">Scenario 3</option>
+                <option value="0">Scenario: Dummy</option>
+                <option value="1">Scenario: Basic</option>
+                <option value="2">Scenario: Links100</option>
             </select>
         </div>
         <div id="graphContainer"></div>
@@ -34,11 +34,11 @@
                 GraphViewer.show("graphContainer", scenarioBasic);
             } else if (value == 2) {
                 GraphViewer.show("graphContainer", scenarioLinks100);
-            } else if (value == 3) {
+            } else {
                 GraphViewer.show("graphContainer", null);
             }
         }
-        OnSelectionChange(3);
+        document.querySelector('select').dispatchEvent(new Event("change"))
     </script>
 </body>
 

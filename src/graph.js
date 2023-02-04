@@ -74,6 +74,7 @@ class DateUtils{
      * @return {String} The JavaScript Date Object
      */
     static dateFromString(dateTimeString){ //Sample Date => 2022-11-11 16:52:46:057746
+        return new Date(dateTimeString); // TODO: Need to Check
         const [date, time] = dateTimeString.split(" ");
         const [year, month, day] = date.split("-");
         const [hours, minutes, seconds, milliseconds] = time.split(":");
